@@ -89,7 +89,7 @@ section{padding:100px 60px}
 
 .cal-section{padding:100px 60px;background:var(--bg2);position:relative;overflow:hidden;text-align:center}
 .cal-section::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(1,158,250,.06) 0%,transparent 70%);pointer-events:none}
-.cal-inner{position:relative;z-index:2;max-width:680px;margin:0 auto}
+.cal-inner{position:relative;z-index:2;max-width:900px;margin:0 auto}
 .cal-dates{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:48px 0 36px}
 .cal-date{border:1px solid var(--border);padding:24px 16px;transition:all .2s;cursor:pointer;text-decoration:none;display:block;background:rgba(255,255,255,.02);color:var(--white)}
 .cal-date:hover{border-color:var(--cyan);background:rgba(1,158,250,.06);transform:translateY(-3px);box-shadow:0 8px 24px rgba(1,158,250,.12)}
@@ -102,6 +102,8 @@ section{padding:100px 60px}
 .cal-cta{display:inline-flex;align-items:center;gap:12px;background:var(--cyan);color:var(--bg);font-family:'DM Sans',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;padding:20px 52px;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
 .cal-cta:hover{background:var(--cyan2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(1,158,250,.3)}
 .cal-note{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1px;margin-top:20px;text-transform:uppercase}
+.cal-embed-wrap{margin-top:40px;border:1px solid var(--border2);overflow:hidden;background:#fff;border-radius:2px}
+.cal-embed-wrap .calendly-inline-widget{min-width:320px;height:700px}
 
 footer{padding:40px 60px;background:var(--bg2);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
 .foot-copy{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1px}
@@ -239,27 +241,12 @@ footer{padding:40px 60px;background:var(--bg2);border-top:1px solid var(--border
   <div class="cal-inner">
     <div class="section-label" style="justify-content:center">Reserve Your Seat</div>
     <h2 class="section-h">Pick your date.<br/>Show up ready.</h2>
-    <p class="section-sub" style="margin:0 auto 0;text-align:center">Sessions are capped to keep it personal. Click a date to book your spot — you'll get a Google Meet link instantly via Calendly.</p>
-    <div class="cal-dates">
-      <a class="cal-date" href="https://calendly.com/chris-okoye-chargefuze/chargefuze-virtual-open-house" target="_blank">
-        <div class="cd-day">Thu, March 5</div>
-        <div class="cd-time">6:00 PM PST &middot; 9:00 PM EST</div>
-        <div class="cd-spots"><span>Limited spots</span> available</div>
-      </a>
-      <a class="cal-date" href="https://calendly.com/chris-okoye-chargefuze/chargefuze-virtual-open-house" target="_blank">
-        <div class="cd-day">Tue, March 10</div>
-        <div class="cd-time">12:00 PM PST &middot; 3:00 PM EST</div>
-        <div class="cd-spots"><span>Limited spots</span> available</div>
-      </a>
-      <a class="cal-date" href="https://calendly.com/chris-okoye-chargefuze/chargefuze-virtual-open-house" target="_blank">
-        <div class="cd-day">Thu, March 12</div>
-        <div class="cd-time">6:00 PM PST &middot; 9:00 PM EST</div>
-        <div class="cd-spots"><span>Limited spots</span> available</div>
-      </a>
+    <p class="section-sub" style="margin:0 auto 0;text-align:center">Sessions are capped to keep it personal. Pick a time below — you'll get a Google Meet link instantly upon booking.</p>
+    <div class="cal-embed-wrap">
+      <div class="calendly-inline-widget" data-url="https://calendly.com/chris-okoye-chargefuze/chargefuze-virtual-open-house?hide_gdpr_banner=1&background_color=0b1018&text_color=f8fafc&primary_color=019efa" style="min-width:320px;height:700px;"></div>
     </div>
-    <div class="cal-divider">or book any available time</div>
-    <a class="cal-cta" href="https://calendly.com/chris-okoye-chargefuze/chargefuze-virtual-open-house" target="_blank">Open Calendly &#x2192;</a>
     <div class="cal-note">&#x1F4C5; Google Meet &middot; 60 min &middot; Free</div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
   </div>
 </section>
 
